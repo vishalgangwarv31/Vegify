@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1,
+        "name": "Orange",
+        "price": 50,
+        "image":"image/product-1.png"
+    },
+    {
+        "id" : 2,
+        "name": "Onion",
+        "price": 50,
+        "image":"image/product-2.png"
+    },
+    {
+        "id" : 3,
+        "name": "Cabbage",
+        "price": 30,
+        "image":"image/product-4.png"
+    },
+    {
+        "id" : 4,
+        "name": "Potato",
+        "price": 40,
+        "image":"image/product-5.png"
+    },
+    {
+        "id" : 5,
+        "name": "Avacoado",
+        "price": 90,
+        "image":"image/product-6.png"
+    },
+    {
+        "id" : 6,
+        "name": "Carrot",
+        "price": 60,
+        "image":"image/product-7.png"
+    }
+]

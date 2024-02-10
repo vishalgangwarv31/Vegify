@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Log</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+
+<header class="header">
+
+    <a href="#" class="logo"> <i></i> Vegetable Log </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a> 
+        <a href="#products">products</a>
+        <a href="http://127.0.0.1:5000/">Price</a>
+        <a href="#graph">Graph</a>
+        <a href="#review">review</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn" ></div>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+        <a style="font-size: 15px;" href="./cart/cart.html">Shop Item</a>
+    </div>
+
+    <form action="/login" method="post" class="login-form">
+        <p>Login <a href="./login.html">click here</a></p>
+        <p>don't have an account <a href="./signup.html ">create now</a></p>
+    </form>
+
+</header>
+
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>fresh and organic products for your</h3>
+        <a href="./cart/cart.html" class="btn">shop now</a>
+    </div>
+
+</section>
+
+
+<section class="products" id="products">
+
+    <h1 class="heading"> our products </h1>
+
+    <div class="swiper product-slider">
+
+        <div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-1.png" alt="">
+                <h3>orange</h3>
+                <div class="price"> "Oranges: Nature's tangy burst of sunshine, packed with Vitamin C goodness." </div>
+                <!-- <a class="btn" onclick="addToCart(0)">add to cart</a> -->
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-2.png" alt="">
+                <h3>onion</h3>
+                <div class="price"> "Onions: Culinary essentials that add layers of flavor to every dish." </div>
+                <div class="stars">
+                <!-- <a onclick="addToCart(1)" class="btn">add to cart</a> -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="swiper product-slider">
+
+        <div >
+
+            <div class="swiper-slide box">
+                <img src="image/product-5.png" alt="">
+                <h3>potato</h3>
+                <div class="price"> "Potatoes: Versatile treasures that bring comfort and creativity to your plate." </div>
+                <!-- <a onclick="addToCart(2)" class="btn">add to cart</a> -->
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-6.png" alt="">
+                <h3>avocado</h3>
+                <div class="price"> "Avocado: Creamy indulgence packed with healthy fats and endless culinary possibilities."</div>
+                <!-- <a onclick="addToCart(3)" class="btn">add to cart</a> -->
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-7.png" alt="">
+                <h3>carrot</h3>
+                <div class="price">
+                    "Carrot: Crisp, vibrant, and rich in nutrients, nature's vibrant orange snack."</div>
+                <!-- <a onclick="addToCart(4)" class="btn">add to cart</a> -->
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-8.png" alt="">
+                <h3> lemon</h3>
+                <div class="price"> 
+                    "Lemon: Zesty and refreshing, a citrus companion for both cooking and rejuvenation."</div>
+                <!-- <a onclick="addToCart(5)" class="btn">add to cart</a> -->
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<section class="graph" id="graph">
+    <h1 class="heading">Price graph of a product</h1>
+    
+    <div style="font-size: 20px;">
+        <form action="">
+            <label for="prod">Product:</label>
+            <select name="prod" id="prod">
+              <option value="O" style="font-size: 17px;">Orange</option>
+              <option value="ON" style="font-size: 17px;">Onion</option>
+              <option value="P" style="font-size: 17px;">Potato</option>
+              <option value="C" style="font-size: 17px;">Carrot</option>
+              <option value="L" style="font-size: 17px;">Lemon</option>
+            </select>
+            <br>
+            <a onclick="refreshGraph()" class="btn">Submit</a>
+          </form>
+    </div>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <canvas id="myChart" style="width:100%;max-width:600px;margin-left: 300px;"></canvas>
+</section>
+
+
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's review </h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <p>Very good website. All the stuff on this website is absolutely great. You all can buy your stuff from here.</p>
+                <h3>john</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <p>Very good website. All the stuff on this website is absolutely great. You all can buy your stuff from here.</p>
+                <h3>Juliyana</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <p>Very good website. All the stuff on this website is absolutely great. You all can buy your stuff from here.</p>
+                <h3>Jonathon</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
